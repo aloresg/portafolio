@@ -1,0 +1,404 @@
+/* Estilo básico para restablecer márgenes y paddings */
+:root {
+    --header-bg-color: #e8e8e8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #373737;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
+nav {
+    padding: 10px 0px; 
+}
+
+.body-padding{
+    padding: 50px 100px;
+}
+
+@media (max-width: 1000px) {
+    .body-padding {
+        padding: 50px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .body-padding {
+        padding: 50px 20px;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-principal {
+    display: flex; 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal li {
+    margin-left: 20px;
+}
+
+.menu-principal li a {
+    color: rgb(92, 92, 92); 
+    text-decoration: none;
+    padding: 8px 12px; 
+    transition: background-color 0.3s;
+}
+
+.menu-principal li a:hover {
+    background-color: #555; 
+    border-radius: 5px;
+    color: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
+
+@media (max-width: 1000px) {
+
+    header {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .correo {
+        display: block;
+    }
+
+    .menu-option{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+.banner-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-contenido .texto {
+    margin-right: 20px;
+}
+
+.mi-foto {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.mi-foto-mobile {
+    display: none;
+}
+.mi-foto-desktop {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .mi-foto {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .banner-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-contenido .texto {
+        margin-right: 0; /* Cambiado de margin-left a margin-right */
+        margin-top: 20px;
+    }
+
+    .mi-foto {
+        width: 160px;
+        height: 160px;
+    }
+    .mi-foto-mobile {
+        display: block;
+    }
+    .mi-foto-desktop {
+        display: none;
+    }
+}
+
+
+.bg-blue {
+    background-color: #e2ecf8;
+}
+
+.bg-gray {
+    background-color: var(--header-bg-color);
+}
+
+
+
+
+
+.grilla-s {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grilla-m {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grilla-s .card {
+    height: 200px;
+}
+
+.grilla-m .card {
+    height: 300px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.flex-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #2A7AE4;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+}
+
+
+.proyect-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.proyect-contenido .imagen {
+    margin-right: 20px;
+}
+
+.proyect-action {
+    border-radius: 50%;
+    width: 400px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1000px) {
+    .proyect-contenido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .imagen, .proyect-action {
+        width: 100%;
+    }
+    .proyect-action {
+        margin-top: 20px;
+    }
+}
+
+
+
+.btn {
+    background-color: var(--header-bg-color);
+    color: #2A7AE4;
+    padding: 10px 20px;
+    border: 1px solid #2A7AE4;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.btn-fill {
+    background-color: #2A7AE4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.contact-image {
+    width: 550px; /* Ajusta el valor según tus necesidades */
+}
+
+  
+
+
+
+
+
+
+
+
+
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 14px;
+    color: #999; /* Gris claro para el label inicial */
+    transition: all 0.3s ease;
+    pointer-events: none; /* Evita que el cursor interfiera */
+    background-color: #fff;
+    padding: 0 5px;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 25px 15px 10px;
+    font-size: 16px;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .input-field:focus {
+    --border-color: #1a73e8; /* Azul para los bordes */
+    border-bottom: 2px solid #1a73e8;
+  }
+  
+  .input-field:focus + .input-label {
+    color: #1a73e8; /* Azul para el label */
+    top: -10px;
+    font-size: 12px;
+  }
+  
+  .input-field::placeholder {
+    color: transparent; /* Esconde el placeholder cuando se escribe */
+  }
+  
+  .input-field:not(:placeholder-shown) + .input-label {
+    top: -10px;
+    font-size: 12px;
+    color: #1a73e8;
+  }
+
+
+
+
+  .textarea-field {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #333; /* Color del texto normal */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    background-color: #fff;
+    resize: none; /* Evita que sea redimensionable */
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .textarea-field:focus {
+    border-color: #1a73e8; /* Azul para el borde */
+    border-bottom: 2px solid #1a73e8;
+  }
+  
+  .textarea-field::placeholder {
+    color: #666; /* Color más visible para el placeholder */
+    font-style: normal; /* Sin cursiva, pero puedes cambiarlo */
+  }
+  
+
+
+ 
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #555;
+  }
+  
